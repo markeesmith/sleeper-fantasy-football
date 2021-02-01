@@ -1,0 +1,28 @@
+{
+  "name": "sleeper-fantasy-fb",
+  "version": "0.0.1",
+  "description": "A package that aims to make the Sleeper App API even more simple to use. Pull and manipulate your Sleeper Fantasy Football league data with ease!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markeesmith/sleeper-fantasy-football.git"
+  },
+  "author": "Markee Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/markeesmith/sleeper-fantasy-football/issues"
+  },
+  "homepage": "https://github.com/markeesmith/sleeper-fantasy-football#readme"
+}
