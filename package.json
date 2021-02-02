@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/markeesmith/sleeper-fantasy-football/issues"
   },
-  "homepage": "https://github.com/markeesmith/sleeper-fantasy-football#readme"
+  "homepage": "https://github.com/markeesmith/sleeper-fantasy-football#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
 }
