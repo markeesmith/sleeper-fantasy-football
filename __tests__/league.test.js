@@ -1,25 +1,25 @@
-var league = require('../lib/league');
+const league = require('../lib/league');
 
 test('Reads leagueId from config file', () => {
-  expect(league.getLeagueId()).toBe("649984475912036352")
+  expect(league.getLeagueId()).toBe('649984475912036352');
 });
 
 test('Fetches league information', async () => {
   const leag = await league.getLeagueInfo();
-  expect(leag.league_id).toBe(league.getLeagueId())
+  expect(leag.league_id).toBe(league.getLeagueId());
 });
 
 test('Fetches league rosters', async () => {
   const rosters = await league.getLeagueRosters();
   for (roster in rosters) {
-    expect(rosters[roster].league_id).toBe(league.getLeagueId())
+    expect(rosters[roster].league_id).toBe(league.getLeagueId());
   }
 });
 
 test('Fetches league users', async () => {
   const users = await league.getLeagueUsers();
   for (user in users) {
-    expect(users[user].league_id).toBe(league.getLeagueId())
+    expect(users[user].league_id).toBe(league.getLeagueId());
   }
 });
 
