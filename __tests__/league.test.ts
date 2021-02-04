@@ -1,4 +1,7 @@
-const league = require('../lib/league');
+import { League } from '../lib/league';
+import config from '../sleeper.config.json';
+
+const league = new League(config.leagueId);
 
 test('Reads leagueId from config file', () => {
   expect(league.getLeagueId()).toBe('649984475912036352');
@@ -11,14 +14,14 @@ test('Fetches league information', async () => {
 
 test('Fetches league rosters', async () => {
   const rosters = await league.getLeagueRosters();
-  for (roster in rosters) {
+  for (const roster in rosters) {
     expect(rosters[roster].league_id).toBe(league.getLeagueId());
   }
 });
 
 test('Fetches league users', async () => {
   const users = await league.getLeagueUsers();
-  for (user in users) {
+  for (const user in users) {
     expect(users[user].league_id).toBe(league.getLeagueId());
   }
 });
