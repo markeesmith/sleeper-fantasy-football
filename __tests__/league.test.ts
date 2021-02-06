@@ -45,3 +45,8 @@ test('Fetches traded picks', async () => {
   const picks = await league.getLeagueTradedPicks();
   expect(typeof picks).toBe('object');
 });
+
+test('Fetches all drafts for league', async () => {
+  const drafts = await league.getLeagueDrafts();
+  expect(drafts.length).toBeGreaterThanOrEqual(1);
+});
