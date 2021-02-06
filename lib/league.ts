@@ -8,6 +8,7 @@ import {
   LeagueTransactions,
   LeagueTradedPicks,
 } from '../types/LeagueTypes';
+import { DraftForLeague } from '../types/DraftTypes';
 
 class League {
   private leagueId: string;
@@ -61,6 +62,12 @@ class League {
   async getLeagueTradedPicks(): Promise<Array<LeagueTradedPicks>> {
     return fetch(
       `https://api.sleeper.app/v1/league/${this.leagueId}/traded_picks`
+    ).then((res) => res.json());
+  }
+
+  async getLeagueDrafts(): Promise<Array<DraftForLeague>> {
+    return fetch(
+      `https://api.sleeper.app/v1/league/${this.leagueId}/drafts`
     ).then((res) => res.json());
   }
 }
